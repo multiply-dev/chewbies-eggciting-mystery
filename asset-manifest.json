@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/chewbies-eggciting-mystery/static/css/main.bbaea856.css",
-    "main.js": "/chewbies-eggciting-mystery/static/js/main.c97ea10c.js",
-    "static/js/453.c3d04325.chunk.js": "/chewbies-eggciting-mystery/static/js/453.c3d04325.chunk.js",
+    "main.css": "/chewbies-eggciting-mystery/static/css/main.8cb196c7.css",
+    "main.js": "/chewbies-eggciting-mystery/static/js/main.e8084e24.js",
+    "static/js/453.794d44b4.chunk.js": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js",
     "static/media/backingtrack1.mp3": "/chewbies-eggciting-mystery/static/media/backingtrack1.00ce8148fc0c4717d071.mp3",
     "static/media/end_background_desktop.jpg": "/chewbies-eggciting-mystery/static/media/end_background_desktop.2aef3b028eee54877950.jpg",
     "static/media/rules_background_desktop.jpg": "/chewbies-eggciting-mystery/static/media/rules_background_desktop.6d76c1c3faeb733b0d73.jpg",
@@ -37,13 +37,14 @@
     "static/media/begin-button.png": "/chewbies-eggciting-mystery/static/media/begin-button.f2c9b4be9a0809437a10.png",
     "static/media/hop-in-mobile-button.png": "/chewbies-eggciting-mystery/static/media/hop-in-mobile-button.850fcd50853e33474182.png",
     "static/media/submit-button.png": "/chewbies-eggciting-mystery/static/media/submit-button.92af65363ac4c01e870a.png",
+    "static/media/grass.png": "/chewbies-eggciting-mystery/static/media/grass.cf9d4dea8b7656e0fddc.png",
     "index.html": "/chewbies-eggciting-mystery/index.html",
-    "main.bbaea856.css.map": "/chewbies-eggciting-mystery/static/css/main.bbaea856.css.map",
-    "main.c97ea10c.js.map": "/chewbies-eggciting-mystery/static/js/main.c97ea10c.js.map",
-    "453.c3d04325.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.c3d04325.chunk.js.map"
+    "main.8cb196c7.css.map": "/chewbies-eggciting-mystery/static/css/main.8cb196c7.css.map",
+    "main.e8084e24.js.map": "/chewbies-eggciting-mystery/static/js/main.e8084e24.js.map",
+    "453.794d44b4.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbaea856.css",
-    "static/js/main.c97ea10c.js"
+    "static/css/main.8cb196c7.css",
+    "static/js/main.e8084e24.js"
   ]
 }
