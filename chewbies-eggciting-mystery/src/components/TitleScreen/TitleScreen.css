@@ -42,12 +42,12 @@
 }
 
 .title-button:hover {
-  transform: scale(1.05);        /* Slightly enlarge on hover */
+  transform: scale(1.05) rotate(5deg);        /* Slightly enlarge on hover */
 }
 
 @media (max-width: 668px) {
   .title-container {
-    background-image: url("../../assets/base/mobile background.png");
+    background-image: url("../../assets/base/mobile_title_background.jpg");
   }
 
   .content-container {
