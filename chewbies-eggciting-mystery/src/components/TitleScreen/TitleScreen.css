@@ -1,7 +1,7 @@
 .title-container {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/Desktop/Title\ Screen.jpg");
+  background-image: url("../../assets/base/title_background_desktop.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -59,7 +59,7 @@
 
 @media (max-width: 668px) {
   .title-container {
-    background-image: url("../../assets/base/mobile_title_background.jpg");
+    background-image: url("../../assets/base/title_background_mobile.jpg");
   }
 
   .content-container {

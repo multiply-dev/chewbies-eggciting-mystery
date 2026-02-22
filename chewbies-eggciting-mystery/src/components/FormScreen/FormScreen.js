@@ -1,10 +1,7 @@
 import "./FormScreen.css";
-import submitButton from "../../assets/buttons/submit.png";
+import submitButton from "../../assets/buttons/submit-button.png";
 import laststep from "../../assets/base/Last Step.png";
-import chewbieHollow from "../../assets/base/chewbie hollow.png";
-import flavorImages from "../../utils/flavorImages.js";
-import bubbleImages from "../../utils/bubbleImages.js";
-import cauldronImages from "../../utils/cauldronImages.js";
+import eggImages from "../../utils/eggImages.js";
 import backButton from "../../assets/buttons/back.png";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -56,51 +53,6 @@ const FormScreen = ({ onSubmit, selectedPotions, onBack }) => {
 
   return (
     <div className="form-screen">
-      
-      {selectedPotions.length > 0 && (
-        <div className="form-chewbie-wrapper">
-
-          {/* Base image */}
-          <img src={chewbieHollow} alt="Chewbie Cauldron" className="chewbie-cauldron" />
-
-          {/* Bubbles */}
-          {selectedPotions.length === 2 && (
-            <img
-              src={bubbleImages[selectedPotions[1].flavor]}
-              alt={selectedPotions[1].flavor}
-              className="bubbles-img"
-            />
-          )}
-
-          {/* Flavor text 1 */}
-          {selectedPotions.length > 0 && (
-            <img
-              src={flavorImages[selectedPotions[0].flavor]}
-              alt={selectedPotions[0].flavor}
-              className="flavor-img-1"
-            />
-          )}
-
-          {/* Flavor text 2 */}
-          {selectedPotions.length === 2 && (
-            <img
-              src={flavorImages[selectedPotions[1].flavor]}
-              alt={selectedPotions[1].flavor}
-              className="flavor-img-2"
-            />
-          )}
-
-          {/* Flavor in cauldron */}
-          {selectedPotions.length === 1  && (
-            <img
-              src={cauldronImages[selectedPotions[0].flavor]}
-              alt={selectedPotions[0].flavor}
-              className="cauldron-img"
-            />
-          )}
-
-        </div>
-      )}
 
       <img
         className="back-button"

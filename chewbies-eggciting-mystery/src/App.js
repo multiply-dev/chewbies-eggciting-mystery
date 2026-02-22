@@ -1,16 +1,53 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import TitleScreen from "./components/TitleScreen/TitleScreen";
 import RulesScreen from "./components/RulesScreen/RulesScreen";
 import GameScreen from "./components/GameScreen/GameScreen";
 import FormScreen from "./components/FormScreen/FormScreen";
 import EndScreen from "./components/EndScreen/EndScreen";
-import potionSound from "./assets/sound effects/potion.mp3";
-import mixingSound from "./assets/sound effects/mixing.wav";
-import submissionSound from "./assets/sound effects/submission.wav";
+import eggSelection1Sound from "./assets/sound effects/eggSelection1.mp3";
+import eggSelection2Sound from "./assets/sound effects/eggSelection2.mp3";
+import buttonSound from "./assets/sound effects/button.mp3";
+import gameSound from "./assets/sound effects/backingtrack1.mp3";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState("title");
-  const [selectedPotions, setSelectedPotions] = useState([]);
+  const [selectedEggs, setSelectedEggs] = useState([]);
+  const bgAudioRef = useRef(null);
+  const sfxTimeoutRef = useRef(null);
+
+  useEffect(() => {
+    const audio = new Audio(gameSound);
+    audio.loop = true;
+    audio.volume = 0.4; // base volume
+    bgAudioRef.current = audio;
+
+    // Do not autoplay yet — browsers block it.
+    return () => audio.pause();
+  }, []);
+
+  const startBackgroundMusic = () => {
+    if (bgAudioRef.current && bgAudioRef.current.paused) {
+      bgAudioRef.current.play().catch(() => {});
+    }
+  };
+
+  const playSFX = (soundFile) => {
+    if (!bgAudioRef.current) return;
+
+    // Duck the background music
+    bgAudioRef.current.volume = 0.15;
+
+    const sfx = new Audio(soundFile);
+    sfx.play();
+
+    // Restore volume after SFX finishes
+    clearTimeout(sfxTimeoutRef.current);
+    sfxTimeoutRef.current = setTimeout(() => {
+      if (bgAudioRef.current) {
+        bgAudioRef.current.volume = 0.4;
+      }
+    }, 500); // adjust to match your SFX length
+  };
 
   // Switch screen
   const goToScreen = (screen) => {
@@ -18,34 +55,41 @@ function App() {
   };
 
 
-  const handlePotionSelect = (potion) => {
-    const audio = new Audio(potionSound);
-    audio.play();
+  const handleEggSelect = (egg) => {
 
-    let newSelections = [...selectedPotions];
+    let newSelections = [...selectedEggs];
 
-    // check if potion is already selected
-    const alreadySelected = newSelections.find(p => p.flavor === potion.flavor);
-
+    // check if egg is already selected
+    const alreadySelected = newSelections.find(p => p.flavor === egg.flavor);
+    const wasDeselect = !!alreadySelected;
+    
     if (alreadySelected) {
       // deselect by filtering it out
-      newSelections = newSelections.filter(p => p.flavor !== potion.flavor);
+      newSelections = newSelections.filter(p => p.flavor !== egg.flavor);
     } else {
       if (newSelections.length < 2) {
-        newSelections.push(potion);
+        newSelections.push(egg);
       } else {
-        newSelections = [potion]; // restart selection if already have 2
+        newSelections = [egg]; // restart selection if already have 2
       }
     }
 
-    setSelectedPotions(newSelections);
+    if (!wasDeselect) {
+      if (newSelections.length === 1) {
+        playSFX(eggSelection1Sound);
+      } else if (newSelections.length === 2) {
+        playSFX(eggSelection2Sound);
+        
+      }
+    }
+
+    setSelectedEggs(newSelections);
   };
 
 
   // Handle form submission
   const handleFormSubmit = () => {
-    const audio = new Audio(submissionSound);
-    audio.play();
+    playSFX(buttonSound);
     goToScreen("end");
   };
 
@@ -53,34 +97,32 @@ function App() {
     <div className="App">
       {currentScreen === "title" && (
         <TitleScreen onNext={() => {
-          const audio = new Audio(mixingSound);
-          audio.play();
-          goToScreen("rules")}
-        } />
+          startBackgroundMusic();
+          playSFX(buttonSound);
+          goToScreen("rules");
+        }} />
       )}
 
       {currentScreen === "rules" && (
         <RulesScreen onNext={() => {
-          const audio = new Audio(mixingSound);
-          audio.play();
+          playSFX(buttonSound);
           goToScreen("game")}
         } />
       )}
 
       {currentScreen === "game" && (
         <GameScreen
-          selectedPotions={selectedPotions}
-          onSelectPotion={handlePotionSelect}
+          selectedEggs={selectedEggs}
+          onSelectEgg={handleEggSelect}
           onMix={() => {
-            const audio = new Audio(mixingSound);
-            audio.play();
+            playSFX(buttonSound);
             goToScreen("form")}
           }
         />
       )}
 
       {currentScreen === "form" && (
-        <FormScreen onSubmit={handleFormSubmit} selectedPotions={selectedPotions} onBack={() => {
+        <FormScreen onSubmit={handleFormSubmit} selectedEggs={selectedEggs} onBack={() => {
           goToScreen("game")}
         } />
       )}

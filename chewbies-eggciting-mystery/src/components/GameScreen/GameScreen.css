@@ -17,54 +17,34 @@
   display: none;
 }
 
-.shelves-img {
-    position: absolute;
-    bottom: 5%;
-    right: -4%;
-    width: 36rem;
-    display: flex;
-    flex-direction: column;
-    justify-self: end;
-}
-
-.shelves {
+.egg-grid {
   position: absolute;
   bottom: 8%;
   right: 2.2%;
   width: 35%;
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 across (desktop) */
+  grid-template-rows: repeat(3, auto);   /* 3 rows */
+
+  justify-items: center;
   align-items: end;
+  z-index: 2;
 }
 
-.carousel-row {
-  display: none;
-}
-
-.shelf {
-  display: flex;
-  justify-content: center;
-  margin-bottom: -10px;
-}
-
-.shelf .potion-icon:last-child {
-  margin-right: 0;
-}
-
-.potion-icon {
+.egg-icon {
   width: 140px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  margin-right: -45px;
+  /* margin-right: -45px; */
 }
 
-.potion-icon:hover {
+.egg-icon:hover {
   transform: scale(1.1);
 }
 
-.potion-icon.selected {
-  transform: rotate(-20deg);
+.egg-icon.selected {
+  transform: rotate(-20deg) translateY(-20px);
   animation: jiggle 0.4s ease;
 }
 
@@ -77,20 +57,37 @@
 }
 
 
-.mix-button img:hover {
+.submit-button:hover {
   transform: scale(1.05);
 }
 
-.mix-button:disabled img {
+.submit-button:disabled img {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.submit-desktop {
+  display: block;
+}
+
+.submit-mobile {
+  display: none;
+}
+
+.submit-button {
+  position: absolute;
+  top: 71%;
+  left: 63%;
+  z-index: 5;
+  cursor: pointer;
+  width: 27%;
+  transition: transform 0.3s ease;
 }
 
 /* === Chewbie and Related Elements === */
 .chewbie-wrapper {
   position: absolute;
   left: 30%;
-  transform: translateX(-50%);
   width: 43%;
   display: flex;
   justify-content: center;
@@ -101,59 +98,6 @@
   margin-bottom: -10rem;
 }
 
-/* Base cauldron image */
-.chewbie-cauldron {
-  width: 100%;
-  display: block;
-}
-
-/* Flavor inside the cauldron */
-.cauldron-img {
-  position: absolute;
-  top: 43.8%;
-  left: 62%;
-  transform: translateX(-50%);
-  width: 48%;
-  z-index: 3;
-}
-
-/* Bubbles floating above cauldron */
-.bubbles-img {
-  position: absolute;
-  top: 44%;
-  left: 61.8%;
-  transform: translateX(-50%);
-  width: 47.8%;
-  z-index: 4;
-}
-
-/* Flavor texts anchored to cauldron */
-.flavor-img-1 {
-  position: absolute;
-  top: 8%;
-  left: 6%;
-  width: 37%;
-  z-index: 4;
-}
-
-.flavor-img-2 {
-  position: absolute;
-  top: 8%;
-  right: 7%;
-  width: 37%;
-  z-index: 4;
-}
-
-.mix-button {
-  position: absolute;
-  top: 71%;
-  left: 63%;
-  transform: translateX(-50%);
-  z-index: 5;
-  cursor: pointer;
-  width: 27%;
-  transition: transform 0.3s ease;
-}
 
 /* Mobile layout adjustments */
 @media (max-width: 868px) {
@@ -171,6 +115,19 @@
     display: none;
   }
 
+  .egg-grid {
+    position: relative;
+    width: 88vw;
+    margin: 0 auto;
+    top: 90px;
+    right: auto;
+    bottom: auto;
+
+    grid-template-columns: repeat(3, 1fr); /* 3 across (mobile) */
+    grid-template-rows: repeat(5, auto);   /* 5 rows */
+    gap: 10px;
+  }
+
   .chewbie-wrapper {
     align-self: anchor-center;
     left: 50%;
@@ -179,119 +136,20 @@
     margin-top: -8rem;
   }
 
-  .shelves {
-    display: none;
-  }
-  .shelves-img {
-    display: none;
-  }
-
-  .shelves-img-mobile {
-    position: absolute;
-    width:95vw;
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    margin-top: 2rem;
-  }
-
-  .arrow {
-    width: 10vw;
-    position: absolute;
-    top: 140%;
-    transform: translateY(-50%);
-    z-index: 10;
-    cursor: pointer;
-  }
-
-  .shelves-mobile {
-    position: relative;
-    width: 95vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 50px;
-  }
-
-  .carousel-row {
-    display: flex;
-    justify-content: space-between;
-    width: 69vw;
-    /* animation: fadeGroup 0.4s ease; */
-  }
-
-  @keyframes fadeGroup {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  .potion-icon {
+  .egg-icon {
     flex: 1 1 0;
-    max-width: calc(88vw / 3 - 10px); /* 3 potions, with a little spacing */
+    max-width: calc(88vw / 3 - 10px); /* 3 eggs, with a little spacing */
     height: auto;
     cursor: pointer;
   }
-
-  .potion-icon {
-    animation: fadeInRight 0.5s ease;
+ 
+  .submit-desktop {
+    display: none;
   }
 
-  .potion-icon.slide-left {
-    animation: fadeInLeft 0.5s ease;
-  }
-
-  @keyframes fadeInRight {
-    from {
-      opacity: 1;
-      transform: translateX(60px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes fadeInLeft {
-    from {
-      opacity: 1;
-      transform: translateX(-60px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .arrow.left {
-    left: 61px;
-  }
-
-  .arrow.right {
-    right: 41px;
-  }
-
-  .arrow.disabled {
-    opacity: 0.3;
-    cursor: not-allowed;
+  .submit-mobile {
+    display: block;
   }
   
 }
 
-@media (max-width: 620px) {
-  .chewbie-wrapper {
-      align-self: anchor-center;
-      left: 50%;
-      width: 70vw;
-      top: 35%;
-      margin-top: -5rem;
-  }
-}
-
-@media (max-width: 520px) {
-  .chewbie-wrapper {
-        align-self: anchor-center;
-        left: 50%;
-        width: 87vw;
-        margin-top: -5rem;
-  }
-}

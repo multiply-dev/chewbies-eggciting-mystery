@@ -1,7 +1,7 @@
 .end-screen {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/base/desktop background.png");
+  background-image: url("../../assets/base/end_background_desktop.jpg");
   background-size: cover;
   background-position: center 80%;
   display: flex;
@@ -15,7 +15,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/base/submitt page smoke-desktop.png");
+  background-image: url("../../assets/base/end_background_mobile.jpg");
   background-size: cover;
   background-position: center 70%;
   z-index: 2;
