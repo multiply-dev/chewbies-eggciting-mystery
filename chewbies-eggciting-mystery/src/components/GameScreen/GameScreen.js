@@ -3,6 +3,7 @@ import gameBase from "../../assets/base/game_background_desktop.jpg";
 import gameBaseMobile from "../../assets/base/game_background_mobile.jpg";
 import eggSubmitButton from "../../assets/buttons/egg-submit-button.png";
 import submitButton from "../../assets/buttons/submit-button.png";
+import grass from "../../assets/base/grass.png";
 
 const eggs = [
     "BLUE RASPBERRY", "BLUEBERRY", "COTTON CANDY", "DRAGON FRUIT", "FRUIT PUNCH",
@@ -19,7 +20,7 @@ const GameScreen = ({ selectedEggs, onSelectEgg, onMix }) => {
       <img src={gameBaseMobile} alt="Game Background" className="game-bg-mobile" />
       
       {selectedEggs.length > 0 && (
-        <div className="chewbie-wrapper">
+        <div >
 
         {selectedEggs.length === 2 && (
           <>
@@ -43,19 +44,31 @@ const GameScreen = ({ selectedEggs, onSelectEgg, onMix }) => {
         </div>
       )}
 
-      <div className="egg-grid">
+     <div className="egg-grid">
         {eggs.map((flavor) => {
           const isSelected = selectedEggs.some(p => p.flavor === flavor);
           const eggSrc = require(`../../assets/eggs/eggs_${flavor}.png`);
 
           return (
-            <img
+            <div
               key={flavor}
-              src={eggSrc}
-              alt={flavor}
-              className={`egg-icon ${isSelected ? "selected" : ""}`}
+              className={`egg-cell ${isSelected ? "selected" : ""}`}
               onClick={() => onSelectEgg({ flavor, color: flavor })}
-            />
+            >
+              <img
+                src={eggSrc}
+                alt={flavor}
+                className="egg-icon"
+              />
+
+              {/* Grass overlay */}
+              <img
+                src={grass}
+                alt=""
+                className="egg-grass"
+                aria-hidden="true"
+              />
+            </div>
           );
         })}
       </div>

@@ -20,7 +20,7 @@
 .egg-grid {
   position: absolute;
   bottom: 8%;
-  right: 2.2%;
+  right: 35%;
   width: 35%;
   gap: 1rem;
   display: grid;
@@ -32,17 +32,27 @@
   z-index: 2;
 }
 
-.egg-icon {
+.egg-cell {
+  position: relative;
   width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   cursor: pointer;
+}
+
+.egg-icon {
+  width: 100%;
   transition: transform 0.2s ease;
+  position: relative;
+  z-index: 2; /* below grass */
 }
 
 .egg-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.egg-icon.selected {
+.egg-cell.selected .egg-icon {
   transform: rotate(-20deg) translateY(-20px);
   animation: jiggle 0.4s ease;
 }
@@ -55,6 +65,15 @@
   100% { transform: rotate(-20deg) translateX(0); }
 }
 
+.egg-grass {
+  position: absolute;
+  bottom: -6px;          /* tweak to taste */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115%;           /* slightly wider than egg */
+  pointer-events: none;  /* clicks go through to egg */
+  z-index: 3;            /* above egg */
+}
 
 .submit-button:hover {
   transform: scale(1.05);
@@ -109,6 +128,9 @@
     gap: 10px;
   }
 
+  .egg-cell {
+    width: calc(75vw / 3 - 10px);
+  }
 
   .egg-icon {
     flex: 1 1 0;
