@@ -1,26 +1,25 @@
 {
   "files": {
-    "main.css": "/chewbies-eggciting-mystery/static/css/main.4f15f725.css",
-    "main.js": "/chewbies-eggciting-mystery/static/js/main.6c3ed1bb.js",
+    "main.css": "/chewbies-eggciting-mystery/static/css/main.eef8b5ee.css",
+    "main.js": "/chewbies-eggciting-mystery/static/js/main.7b81f08d.js",
     "static/js/453.794d44b4.chunk.js": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js",
+    "static/media/rules_background_desktop.jpg": "/chewbies-eggciting-mystery/static/media/rules_background_desktop.6d76c1c3faeb733b0d73.jpg",
     "static/media/Title Screen.jpg": "/chewbies-eggciting-mystery/static/media/Title Screen.3347e4b0d27930539899.jpg",
     "static/media/desktop background.png": "/chewbies-eggciting-mystery/static/media/desktop background.31aa77a908d7e72add4b.png",
     "static/media/submission.wav": "/chewbies-eggciting-mystery/static/media/submission.dff8939f210d8e1821f7.wav",
     "static/media/mobile background.png": "/chewbies-eggciting-mystery/static/media/mobile background.2a095b38eb1fd6a3243d.png",
+    "static/media/rules_background_mobile.jpg": "/chewbies-eggciting-mystery/static/media/rules_background_mobile.bc121e4e0f943de1f4b0.jpg",
     "static/media/mobile_title_background.jpg": "/chewbies-eggciting-mystery/static/media/mobile_title_background.c6ed2ec4ebdd58d362d4.jpg",
     "static/media/game background desktop-form drop.png": "/chewbies-eggciting-mystery/static/media/game background desktop-form drop.2cf9669fb66477156d70.png",
     "static/media/hop-in-button.png": "/chewbies-eggciting-mystery/static/media/hop-in-button.b0f6ef02da79fc1cfcef.png",
     "static/media/glowing chewbie for submit- desktop.png": "/chewbies-eggciting-mystery/static/media/glowing chewbie for submit- desktop.c37ed425de8f13a87a6b.png",
     "static/media/glowing chewbie for submit screen-mobile.png": "/chewbies-eggciting-mystery/static/media/glowing chewbie for submit screen-mobile.f576e9fd1557972afe6e.png",
     "static/media/mixing.wav": "/chewbies-eggciting-mystery/static/media/mixing.ae7711292550107413e8.wav",
-    "static/media/desktop-rules background.png": "/chewbies-eggciting-mystery/static/media/desktop-rules background.aba53628685e84a3a0fe.png",
     "static/media/mobile game form.png": "/chewbies-eggciting-mystery/static/media/mobile game form.79a8165067deeb717f0c.png",
-    "static/media/mobile-rules background.png": "/chewbies-eggciting-mystery/static/media/mobile-rules background.09012c72229f043263f7.png",
     "static/media/submittion clouds, no background.png": "/chewbies-eggciting-mystery/static/media/submittion clouds, no background.d873f2750313b3a3b5e0.png",
     "static/media/chewbie hollow.png": "/chewbies-eggciting-mystery/static/media/chewbie hollow.5d4f939f9264bc1c16db.png",
     "static/media/potion shelves-desktop.png": "/chewbies-eggciting-mystery/static/media/potion shelves-desktop.dedfbdaad163206762ae.png",
     "static/media/potion_Glow Blue Raspberry.png": "/chewbies-eggciting-mystery/static/media/potion_Glow Blue Raspberry.46d4df841c9104e48420.png",
-    "static/media/happy_mixing_button.png": "/chewbies-eggciting-mystery/static/media/happy_mixing_button.974f8b6a7e60510e505d.png",
     "static/media/potion_Glow Grape.png": "/chewbies-eggciting-mystery/static/media/potion_Glow Grape.b69ae596bb0a2e862566.png",
     "static/media/cauldron bubbles-Purple.png": "/chewbies-eggciting-mystery/static/media/cauldron bubbles-Purple.029e060c5f86074ebc08.png",
     "static/media/cauldron bubbles-Red.png": "/chewbies-eggciting-mystery/static/media/cauldron bubbles-Red.0d11069c02e9d564d461.png",
@@ -74,6 +73,7 @@
     "static/media/potion_Apple.png": "/chewbies-eggciting-mystery/static/media/potion_Apple.1e46d01155d876eb34de.png",
     "static/media/potion_Rainbow Sherbert.png": "/chewbies-eggciting-mystery/static/media/potion_Rainbow Sherbert.5fabb98200e8fdc7fb2e.png",
     "static/media/potion_Lemon.png": "/chewbies-eggciting-mystery/static/media/potion_Lemon.8d080f558bd856ecfa8e.png",
+    "static/media/begin-button.png": "/chewbies-eggciting-mystery/static/media/begin-button.f2c9b4be9a0809437a10.png",
     "static/media/hop-in-mobile-button.png": "/chewbies-eggciting-mystery/static/media/hop-in-mobile-button.850fcd50853e33474182.png",
     "static/media/Last Step.png": "/chewbies-eggciting-mystery/static/media/Last Step.002a0ffa552d7aa933cb.png",
     "static/media/cauldron base-Lemon.png": "/chewbies-eggciting-mystery/static/media/cauldron base-Lemon.859bf0b65a208434c591.png",
@@ -104,12 +104,12 @@
     "static/media/FlavorNames-Blue Raspberry.png": "/chewbies-eggciting-mystery/static/media/FlavorNames-Blue Raspberry.e098755ca464318f9e5c.png",
     "static/media/FlavorNames-Rainbow Sherbert.png": "/chewbies-eggciting-mystery/static/media/FlavorNames-Rainbow Sherbert.b3b8278cdce1235de8a1.png",
     "index.html": "/chewbies-eggciting-mystery/index.html",
-    "main.4f15f725.css.map": "/chewbies-eggciting-mystery/static/css/main.4f15f725.css.map",
-    "main.6c3ed1bb.js.map": "/chewbies-eggciting-mystery/static/js/main.6c3ed1bb.js.map",
+    "main.eef8b5ee.css.map": "/chewbies-eggciting-mystery/static/css/main.eef8b5ee.css.map",
+    "main.7b81f08d.js.map": "/chewbies-eggciting-mystery/static/js/main.7b81f08d.js.map",
     "453.794d44b4.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f15f725.css",
-    "static/js/main.6c3ed1bb.js"
+    "static/css/main.eef8b5ee.css",
+    "static/js/main.7b81f08d.js"
   ]
 }
