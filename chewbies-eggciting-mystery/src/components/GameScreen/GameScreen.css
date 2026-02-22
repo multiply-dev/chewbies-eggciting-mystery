@@ -22,7 +22,7 @@
   bottom: 8%;
   right: 2.2%;
   width: 35%;
-
+  gap: 1rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 across (desktop) */
   grid-template-rows: repeat(3, auto);   /* 3 rows */
@@ -33,10 +33,9 @@
 }
 
 .egg-icon {
-  width: 140px;
+  width: 120px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  /* margin-right: -45px; */
 }
 
 .egg-icon:hover {
@@ -75,29 +74,11 @@
 }
 
 .submit-button {
-  position: absolute;
-  top: 71%;
-  left: 63%;
-  z-index: 5;
+  position: relative;
+  bottom: -4rem;
+  left: 2rem;
   cursor: pointer;
-  width: 27%;
-  transition: transform 0.3s ease;
 }
-
-/* === Chewbie and Related Elements === */
-.chewbie-wrapper {
-  position: absolute;
-  left: 30%;
-  width: 43%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: anchor-center;
-  z-index: 2;
-  margin-left: -25px;
-  margin-bottom: -10rem;
-}
-
 
 /* Mobile layout adjustments */
 @media (max-width: 868px) {
@@ -128,19 +109,17 @@
     gap: 10px;
   }
 
-  .chewbie-wrapper {
-    align-self: anchor-center;
-    left: 50%;
-    width: 50vw;
-    top: 35%;
-    margin-top: -8rem;
-  }
 
   .egg-icon {
     flex: 1 1 0;
-    max-width: calc(88vw / 3 - 10px); /* 3 eggs, with a little spacing */
+    max-width: calc(75vw / 3 - 10px); /* 3 eggs, with a little spacing */
     height: auto;
     cursor: pointer;
+  }
+
+  .submit-button {
+    width: 14rem;
+    justify-self: center;
   }
  
   .submit-desktop {

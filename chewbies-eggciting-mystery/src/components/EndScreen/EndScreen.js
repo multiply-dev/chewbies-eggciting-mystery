@@ -1,5 +1,5 @@
 import "./EndScreen.css";
-import goodluck from "../../assets/base/good luck.png";
+// import goodluck from "../../assets/base/good luck.png";
 
 const EndScreen = ({ onReplay }) => {
   return (
@@ -8,7 +8,7 @@ const EndScreen = ({ onReplay }) => {
       <div className="chewbie" />
       <div className="text-container">
         <h1 className="submit-text">Your guess has been submitted!</h1>
-        <img src={goodluck} alt="Good Luck" className="good-luck" />
+        {/* <img src={goodluck} alt="Good Luck" className="good-luck" /> */}
       </div>
     </div>
   );

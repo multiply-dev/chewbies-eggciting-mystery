@@ -14,7 +14,9 @@
   align-self: center;
   cursor: pointer;      
   transition: transform 0.2s ease;
-  width: 10rem;
+  width: 23rem;
+  bottom: 3rem;
+  position: absolute;
 }
 
 .rules-button:hover {
@@ -27,7 +29,9 @@
   }
 
   .rules-button{
-    width: 10rem;
+    width: 23rem;
+    position: absolute;
+    bottom: 11rem;
   }
 
 }

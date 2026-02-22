@@ -1,14 +1,12 @@
 import "./FormScreen.css";
 import submitButton from "../../assets/buttons/submit-button.png";
-import laststep from "../../assets/base/Last Step.png";
-import eggImages from "../../utils/eggImages.js";
-import backButton from "../../assets/buttons/back.png";
+import enterText from "../../assets/base/Form_Text.png";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import jsonp from 'jsonp';
 
-const FormScreen = ({ onSubmit, selectedPotions, onBack }) => {
+const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
   const MailchimpURL = process.env.REACT_APP_MAILCHIMP;
   const captchaKey = process.env.REACT_APP_CAPTCHA_KEY;
   const [fname, setFName] = useState('');
@@ -17,7 +15,6 @@ const FormScreen = ({ onSubmit, selectedPotions, onBack }) => {
   const [flavor, setFlavor] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState(null);
-  const [honeypot, setHoneypot] = useState("");
   const [captchaToken, setCaptchaToken] = useState(null);
 
   const handleSubmit = e => {
@@ -30,15 +27,10 @@ const FormScreen = ({ onSubmit, selectedPotions, onBack }) => {
       setIsSubmitting(false);
       return;
     }
-    if (honeypot !== "") {
-      // Bot detected
-      setIsSubmitting(false);
-      return;
-    }
 
     const url = MailchimpURL;
     const formName = encodeURIComponent("ChewbiesEggcitingMystery");
-    const guess = selectedPotions[0].flavor + ", " + selectedPotions[1].flavor
+    const guess = selectedEggs[0].flavor + ", " + selectedEggs[1].flavor
     jsonp(`${url}&FNAME=${fname}&LNAME=${lname}&EMAIL=${email}&FORM=${formName}&FLAVOR=${flavor}&MYS_GUESS=${guess}&ACCEPTS_MARKETING=true`, { param: 'c' }, (err, data) => {
       if (err) {
         // Handle error
@@ -54,17 +46,9 @@ const FormScreen = ({ onSubmit, selectedPotions, onBack }) => {
   return (
     <div className="form-screen">
 
-      <img
-        className="back-button"
-        onClick={() => { if (selectedPotions.length >= 2) onBack(); }}
-        src={backButton}
-        alt="Go Back"
-      />
-
       <div className="form-content-container">
         <div className="header-text">
-        <img src={laststep} alt="Last Step" className="last-step" />
-        <h1 className='question-text'>FILL OUT YOUR INFO FOR A CHANCE TO WIN</h1>
+        <img src={enterText} alt="Enter for a chance to win!" className="last-step" />
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
         <form 
@@ -76,47 +60,40 @@ const FormScreen = ({ onSubmit, selectedPotions, onBack }) => {
             <div className="sign-up-text">Sign up for our newsletter<sup>*</sup></div>
             <input
               id="mce-FNAME"
-            name="FNAME"
-            type="text"
-            value={fname}
-            onChange={(e) => setFName(e.target.value)}
-            placeholder="First Name"
-            required
+              name="FNAME"
+              type="text"
+              value={fname}
+              onChange={(e) => setFName(e.target.value)}
+              placeholder="First Name"
+              required
             />
             
             <input
               id="mce-LNAME"
-            name="LNAME"
-            type="text"
-            value={lname}
-            onChange={(e) => setLName(e.target.value)}
-            placeholder="Last Name"
-            required
+              name="LNAME"
+              type="text"
+              value={lname}
+              onChange={(e) => setLName(e.target.value)}
+              placeholder="Last Name"
+              required
             />
             <input
               id="mce-EMAIL"
-            name="EMAIL"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email Address"
-            required
+              name="EMAIL"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email Address"
+              required
             />
             <input
               id="mce-FLAVOR"
-            name="FLAVOR"
-            type="text"
-            value={flavor}
-            onChange={(e) => setFlavor(e.target.value)}
-            placeholder="Favorite Flavor"
-            required
-            />
-            <input
+              name="FLAVOR"
               type="text"
-              name="company"
-              value={honeypot}
-              onChange={(e) => setHoneypot(e.target.value)}
-              style={{ display: 'none' }}
+              value={flavor}
+              onChange={(e) => setFlavor(e.target.value)}
+              placeholder="Favorite Flavor"
+              required
             />
           </div>
 

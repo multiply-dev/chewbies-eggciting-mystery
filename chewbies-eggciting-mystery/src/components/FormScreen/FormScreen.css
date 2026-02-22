@@ -1,7 +1,7 @@
 .form-screen {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/base/game background desktop-form drop.png");
+  background-image: url("../../assets/base/game_background_desktop.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -87,7 +87,7 @@
   .form-screen {
     width: 100vw;
     height: 100vh;
-    background-image: url("../../assets/base/mobile game form.png");
+    background-image: url("../../assets/base/form_background_mobile.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
