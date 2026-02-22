@@ -1,7 +1,7 @@
 .rules-screen {
   width: 100vw;
   height: 100vh;
-  background-image: url("../../assets/base/desktop-rules background.png");
+  background-image: url("../../assets/base/rules_background_desktop.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -9,34 +9,6 @@
   align-items: center;
 }
 
-.rules-container {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-align: center;
-  padding: 1rem 7rem;
-  line-height: 1.5;
-}
-
-.rules-container h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-
-.rules-container h2 {
-  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-}
-
-.rules-container h3 {
-  font-size: clamp(1.2rem, 2vw, 1.75rem);
-  padding: 0rem 1rem;
-}
-
-
-
-.rules-text {
-  /* text-align: left; */
-}
 
 .rules-button {
   align-self: center;
@@ -45,39 +17,17 @@
   width: 10rem;
 }
 
-.yellow {
-  color: #fcdc04;
-}
-
 .rules-button:hover {
   transform: scale(1.05);
 }
 
 @media (max-width: 968px) {
-  .rules-container {
-    padding: 0 2rem;
-  }
-
   .rules-screen {
-    background-image: url("../../assets/base/mobile-rules background.png");
+    background-image: url("../../assets/base/rules_background_mobile.jpg");
   }
 
   .rules-button{
     width: 10rem;
   }
 
-}
-
-@media (max-width: 450px) {
-  .rules-container h1 {
-    font-size: clamp(1.7rem, 1.8vw, 3rem);
-  }
-
-  .rules-container h2 {
-    font-size: clamp(1.2rem, 1.2vw, 2.25rem);
-  }
-
-  .rules-container h3 {
-    font-size: clamp(0.9rem, 0.4vw, 1.75rem);
-  }
 }
