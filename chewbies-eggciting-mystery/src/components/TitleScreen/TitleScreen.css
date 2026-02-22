@@ -1,0 +1,78 @@
+.title-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/base/desktop background.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mystery-char {
+  max-width: 55%;
+  height: auto;
+  object-fit: contain;
+}
+
+.mystery-logo {
+  max-width: 32vw;
+  margin-left: -100px;
+  margin-bottom: 50px;
+}
+
+.mystery-logo-chewbie {
+  display: none;
+}
+
+.title-button {
+  align-self: center;
+  cursor: pointer;               /* Makes the cursor a pointer */
+  transition: transform 0.2s ease; /* Smooth transition for scaling */
+  width: 19vw;
+}
+
+.title-button:hover {
+  transform: scale(1.05);        /* Slightly enlarge on hover */
+}
+
+@media (max-width: 668px) {
+  .title-container {
+    background-image: url("../../assets/base/mobile background.png");
+  }
+
+  .content-container {
+    align-items: center;
+    transform: translateX(0rem);
+    margin-bottom: 75px;
+  }
+
+  .mystery-logo-chewbie {
+    display: block;
+    max-width: 100%;   /* don’t exceed 80% of viewport width */
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .mystery-logo {
+    display: none;
+  }
+
+
+  .title-button {
+    width: 28%;
+  }
+
+  .mystery-char {
+    display: none;
+  }
+}

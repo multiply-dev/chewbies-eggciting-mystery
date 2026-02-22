@@ -1,0 +1,76 @@
+.end-screen {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/base/desktop background.png");
+  background-size: cover;
+  background-position: center 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+}
+
+.smoke {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../assets/base/submitt page smoke-desktop.png");
+  background-size: cover;
+  background-position: center 70%;
+  z-index: 2;
+}
+
+.chewbie {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  background-image: url("../../assets/base/glowing chewbie for submit- desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: 10%;
+  z-index: 1;
+}
+
+.text-container {
+  position: absolute;
+  bottom: 0vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 0 16px 2rem;
+  text-align: center;
+  z-index: 100;
+}
+
+@media (max-width: 968px) {
+  .end-screen {
+    background-image: url("../../assets/base/mobile background.png");
+    background-position: center;
+  }
+
+  .text-container {
+    bottom: 10%;
+  }
+
+  .smoke {
+    background-image: url("../../assets/base/submittion clouds, no background.png");
+    z-index: 2;
+  }
+
+  .chewbie {
+    background-image: url("../../assets/base/glowing chewbie for submit screen-mobile.png");
+    z-index: 1;
+  }
+}
+
+.submit-text {
+  color: white;
+  text-transform: uppercase;
+}
+
+.good-luck {
+  width: 12rem;
+}
