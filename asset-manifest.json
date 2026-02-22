@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/chewbies-eggciting-mystery/static/css/main.404df712.css",
+    "main.css": "/chewbies-eggciting-mystery/static/css/main.4f15f725.css",
     "main.js": "/chewbies-eggciting-mystery/static/js/main.6c3ed1bb.js",
     "static/js/453.794d44b4.chunk.js": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js",
     "static/media/Title Screen.jpg": "/chewbies-eggciting-mystery/static/media/Title Screen.3347e4b0d27930539899.jpg",
@@ -104,12 +104,12 @@
     "static/media/FlavorNames-Blue Raspberry.png": "/chewbies-eggciting-mystery/static/media/FlavorNames-Blue Raspberry.e098755ca464318f9e5c.png",
     "static/media/FlavorNames-Rainbow Sherbert.png": "/chewbies-eggciting-mystery/static/media/FlavorNames-Rainbow Sherbert.b3b8278cdce1235de8a1.png",
     "index.html": "/chewbies-eggciting-mystery/index.html",
-    "main.404df712.css.map": "/chewbies-eggciting-mystery/static/css/main.404df712.css.map",
+    "main.4f15f725.css.map": "/chewbies-eggciting-mystery/static/css/main.4f15f725.css.map",
     "main.6c3ed1bb.js.map": "/chewbies-eggciting-mystery/static/js/main.6c3ed1bb.js.map",
     "453.794d44b4.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.404df712.css",
+    "static/css/main.4f15f725.css",
     "static/js/main.6c3ed1bb.js"
   ]
 }
