@@ -38,7 +38,11 @@
   align-self: center;
   cursor: pointer;               /* Makes the cursor a pointer */
   transition: transform 0.2s ease; /* Smooth transition for scaling */
-  width: 19vw;
+  width:23vw;
+  /* Given iframe constraints, absolutely position elements */
+  position: absolute;
+  right: 5rem;
+  bottom: 11rem;
 }
 
 .title-button-mobile {
