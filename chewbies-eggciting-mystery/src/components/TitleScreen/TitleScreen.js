@@ -7,17 +7,17 @@ import titleChar from "../../assets/base/title page chewbie.png";
 const TitleScreen = ({ onNext }) => {
   return (
     <div className="title-container">
-      <img
+      {/* <img
           className="mystery-char"
           src={titleChar}
           alt="Mystery Game Chewbie Mascot"
-        />
+        /> */}
       <div className="content-container">
-        <img
+        {/* <img
           className="mystery-logo"
           src={mysteryLogo}
           alt="Mystery Game Logo"
-        />
+        /> */}
         <img
           className="mystery-logo-chewbie"
           src={mysteryLogoChewbie}
