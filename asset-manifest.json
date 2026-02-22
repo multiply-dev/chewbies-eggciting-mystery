@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chewbies-eggciting-mystery/static/css/main.af32f158.css",
-    "main.js": "/chewbies-eggciting-mystery/static/js/main.85cc3646.js",
+    "main.css": "/chewbies-eggciting-mystery/static/css/main.404df712.css",
+    "main.js": "/chewbies-eggciting-mystery/static/js/main.6c3ed1bb.js",
     "static/js/453.794d44b4.chunk.js": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js",
     "static/media/Title Screen.jpg": "/chewbies-eggciting-mystery/static/media/Title Screen.3347e4b0d27930539899.jpg",
     "static/media/desktop background.png": "/chewbies-eggciting-mystery/static/media/desktop background.31aa77a908d7e72add4b.png",
@@ -74,6 +74,7 @@
     "static/media/potion_Apple.png": "/chewbies-eggciting-mystery/static/media/potion_Apple.1e46d01155d876eb34de.png",
     "static/media/potion_Rainbow Sherbert.png": "/chewbies-eggciting-mystery/static/media/potion_Rainbow Sherbert.5fabb98200e8fdc7fb2e.png",
     "static/media/potion_Lemon.png": "/chewbies-eggciting-mystery/static/media/potion_Lemon.8d080f558bd856ecfa8e.png",
+    "static/media/hop-in-mobile-button.png": "/chewbies-eggciting-mystery/static/media/hop-in-mobile-button.850fcd50853e33474182.png",
     "static/media/Last Step.png": "/chewbies-eggciting-mystery/static/media/Last Step.002a0ffa552d7aa933cb.png",
     "static/media/cauldron base-Lemon.png": "/chewbies-eggciting-mystery/static/media/cauldron base-Lemon.859bf0b65a208434c591.png",
     "static/media/cauldron base-Cherry.png": "/chewbies-eggciting-mystery/static/media/cauldron base-Cherry.67fda57965d6da230492.png",
@@ -103,12 +104,12 @@
     "static/media/FlavorNames-Blue Raspberry.png": "/chewbies-eggciting-mystery/static/media/FlavorNames-Blue Raspberry.e098755ca464318f9e5c.png",
     "static/media/FlavorNames-Rainbow Sherbert.png": "/chewbies-eggciting-mystery/static/media/FlavorNames-Rainbow Sherbert.b3b8278cdce1235de8a1.png",
     "index.html": "/chewbies-eggciting-mystery/index.html",
-    "main.af32f158.css.map": "/chewbies-eggciting-mystery/static/css/main.af32f158.css.map",
-    "main.85cc3646.js.map": "/chewbies-eggciting-mystery/static/js/main.85cc3646.js.map",
+    "main.404df712.css.map": "/chewbies-eggciting-mystery/static/css/main.404df712.css.map",
+    "main.6c3ed1bb.js.map": "/chewbies-eggciting-mystery/static/js/main.6c3ed1bb.js.map",
     "453.794d44b4.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af32f158.css",
-    "static/js/main.85cc3646.js"
+    "static/css/main.404df712.css",
+    "static/js/main.6c3ed1bb.js"
   ]
 }
