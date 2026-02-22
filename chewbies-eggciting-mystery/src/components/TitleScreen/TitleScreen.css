@@ -86,7 +86,9 @@
 
   .title-button-mobile {
     display: block;
-    width: 28%;
+    position: relative;
+    width: 70%;
+    top: 23rem;
   }
 
   .mystery-char {
