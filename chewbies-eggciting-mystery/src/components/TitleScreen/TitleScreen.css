@@ -41,8 +41,16 @@
   width: 19vw;
 }
 
+.title-button-mobile {
+  display: none;
+}
+
 .title-button:hover {
   transform: scale(1.05) rotate(5deg);        /* Slightly enlarge on hover */
+}
+
+.title-button-mobile:hover {
+  transform: scale(1.05);      /* Slightly enlarge on hover */
 }
 
 @media (max-width: 668px) {
@@ -69,6 +77,11 @@
 
 
   .title-button {
+    display: none;
+  }
+
+  .title-button-mobile {
+    display: block;
     width: 28%;
   }
 
