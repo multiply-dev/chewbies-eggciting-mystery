@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/chewbies-eggciting-mystery/static/css/main.da3dfbce.css",
+    "main.css": "/chewbies-eggciting-mystery/static/css/main.b8d0a5e5.css",
     "main.js": "/chewbies-eggciting-mystery/static/js/main.ba8843f4.js",
     "static/js/453.794d44b4.chunk.js": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js",
     "static/media/form_desktop.png": "/chewbies-eggciting-mystery/static/media/form_desktop.5316cf102ba0fd2d7f28.png",
@@ -48,12 +48,12 @@
     "static/media/submit-button.png": "/chewbies-eggciting-mystery/static/media/submit-button.92af65363ac4c01e870a.png",
     "static/media/grass.png": "/chewbies-eggciting-mystery/static/media/grass.cf9d4dea8b7656e0fddc.png",
     "index.html": "/chewbies-eggciting-mystery/index.html",
-    "main.da3dfbce.css.map": "/chewbies-eggciting-mystery/static/css/main.da3dfbce.css.map",
+    "main.b8d0a5e5.css.map": "/chewbies-eggciting-mystery/static/css/main.b8d0a5e5.css.map",
     "main.ba8843f4.js.map": "/chewbies-eggciting-mystery/static/js/main.ba8843f4.js.map",
     "453.794d44b4.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.da3dfbce.css",
+    "static/css/main.b8d0a5e5.css",
     "static/js/main.ba8843f4.js"
   ]
 }
