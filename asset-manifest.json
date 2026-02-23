@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chewbies-eggciting-mystery/static/css/main.4b2c49f3.css",
-    "main.js": "/chewbies-eggciting-mystery/static/js/main.a782f236.js",
+    "main.css": "/chewbies-eggciting-mystery/static/css/main.0ebc2465.css",
+    "main.js": "/chewbies-eggciting-mystery/static/js/main.ba8843f4.js",
     "static/js/453.794d44b4.chunk.js": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js",
     "static/media/form_desktop.png": "/chewbies-eggciting-mystery/static/media/form_desktop.5316cf102ba0fd2d7f28.png",
     "static/media/backingtrack1.mp3": "/chewbies-eggciting-mystery/static/media/backingtrack1.00ce8148fc0c4717d071.mp3",
@@ -48,12 +48,12 @@
     "static/media/submit-button.png": "/chewbies-eggciting-mystery/static/media/submit-button.92af65363ac4c01e870a.png",
     "static/media/grass.png": "/chewbies-eggciting-mystery/static/media/grass.cf9d4dea8b7656e0fddc.png",
     "index.html": "/chewbies-eggciting-mystery/index.html",
-    "main.4b2c49f3.css.map": "/chewbies-eggciting-mystery/static/css/main.4b2c49f3.css.map",
-    "main.a782f236.js.map": "/chewbies-eggciting-mystery/static/js/main.a782f236.js.map",
+    "main.0ebc2465.css.map": "/chewbies-eggciting-mystery/static/css/main.0ebc2465.css.map",
+    "main.ba8843f4.js.map": "/chewbies-eggciting-mystery/static/js/main.ba8843f4.js.map",
     "453.794d44b4.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b2c49f3.css",
-    "static/js/main.a782f236.js"
+    "static/css/main.0ebc2465.css",
+    "static/js/main.ba8843f4.js"
   ]
 }
