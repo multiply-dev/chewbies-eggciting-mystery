@@ -17,17 +17,22 @@
   display: none;
 }
 
+.game-chewbie {
+  display: block;
+  width: 8rem;
+}
+
 .egg-grid {
   position: absolute;
   bottom: 10%;
-  left: 25%;
+  left: 24%;
   width: 35%;
   gap: 1rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 across (desktop) */
   grid-template-rows: repeat(3, auto);   /* 3 rows */
 
-  column-gap: 2.8rem;
+  column-gap: 2.8rem !important;
   row-gap: 5rem;
 
   justify-items: center;
@@ -37,7 +42,7 @@
 
 .egg-cell {
   position: relative;
-  width: 108px;
+  width: 103px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -106,6 +111,32 @@
   bottom: -4rem;
   left: 2rem;
   cursor: pointer;
+
+  width: 12rem;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+  border: none; 
+  padding: 0; 
+  color: #16478e;
+}
+.submit-button img {
+  width: 8rem; 
+}
+
+.submit-button:hover {
+  transform: scale(1.05);
+}
+
+.submit-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.submit-button.ready-to-mix {
+  filter:
+    drop-shadow(0 0 4px rgba(255,255,255,0.9))
+    drop-shadow(0 0 10px rgba(255,255,255,0.75))
+    drop-shadow(0 0 18px rgba(255,255,255,0.6));
 }
 
 /* Mobile layout adjustments */
@@ -128,31 +159,51 @@
     position: relative;
     width: 88vw;
     margin: 0 auto;
-    top: 90px;
-    right: auto;
-    bottom: auto;
+    left: 0px;
+    top: 30px;
+
+    column-gap: 0 !important;
+    row-gap: 2.8rem;
 
     grid-template-columns: repeat(3, 1fr); /* 3 across (mobile) */
     grid-template-rows: repeat(5, auto);   /* 5 rows */
     gap: 10px;
   }
+  .egg-cell.selected .egg-icon {
+    transform: rotate(20deg) translateY(-20px);
+    animation: jiggle 0.4s ease;
+  }
 
   .egg-cell {
-    width: calc(75vw / 3 - 10px);
+    width: 70px;
   }
 
   .egg-icon {
     flex: 1 1 0;
-    max-width: calc(75vw / 3 - 10px); /* 3 eggs, with a little spacing */
+    max-width: 70px; /* 3 eggs, with a little spacing */
     height: auto;
     cursor: pointer;
   }
 
+  .egg-grid .egg-cell:nth-child(11) { transform: translateX(0px)  }
+  .egg-grid .egg-cell:nth-child(12) { transform: translateX(0px)  }
+  .egg-grid .egg-cell:nth-child(13) { transform: translateX(0px)   }
+  .egg-grid .egg-cell:nth-child(14) { transform: translateX(0px)  }
+  .egg-grid .egg-cell:nth-child(15) { transform: translateX(0px) }
+  
   .submit-button {
     width: 14rem;
-    justify-self: center;
+    justify-self: anchor-center;
+    cursor: pointer;
+    top: 750px;
+    position: relative;
+    left: 4px;
   }
- 
+
+  .submit-wrap {
+    display: block;
+  }
+
   .submit-desktop {
     display: none;
   }
@@ -161,14 +212,8 @@
     display: block;
   }
 
-    .egg-grid .egg-cell:nth-child(n+11) {
-    transform: none;
-    margin: 0;
+  .game-chewbie {
+    display: none;
   }
-
-  .egg-grid .egg-cell:nth-child(n+11) .egg-icon {
-    transform: none;
-  }
-  
 }
 

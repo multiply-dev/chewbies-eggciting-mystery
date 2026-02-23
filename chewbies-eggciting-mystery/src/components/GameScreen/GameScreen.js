@@ -4,6 +4,7 @@ import gameBaseMobile from "../../assets/base/game_background_mobile.jpg";
 import eggSubmitButton from "../../assets/buttons/egg-submit-button.png";
 import submitButton from "../../assets/buttons/submit-button.png";
 import grass from "../../assets/base/grass.png";
+import gameChewbie from "../../assets/base/game_chewbie.png";
 
 const eggs = [
     "BLUE RASPBERRY", "BLUEBERRY", "COTTON CANDY", "DRAGON FRUIT", "FRUIT PUNCH",
@@ -18,27 +19,31 @@ const GameScreen = ({ selectedEggs, onSelectEgg, onMix }) => {
       {/* Background */}
       <img src={gameBase} alt="Game Background" className="game-bg" />
       <img src={gameBaseMobile} alt="Game Background" className="game-bg-mobile" />
+      <img src={gameChewbie} alt="Game Chewbie" className="game-chewbie" />
       
-      {selectedEggs.length > 0 && (
+      {selectedEggs.length >= 0 && (
         <div >
 
-        {selectedEggs.length === 2 && (
+        {selectedEggs.length >= 0 && (
           <>
             {/* Desktop Button */}
-            <img
-              className="submit-button submit-desktop"
-              onClick={() => { if (selectedEggs.length >= 2) onMix(); }}
-              src={eggSubmitButton}
-              alt="Mix the Mystery"
-            />
+            <div className={`submit-wrap ${selectedEggs.length === 2 ? "ready-to-mix" : ""}`}>
+              <img
+                className={`submit-button submit-desktop ${selectedEggs.length === 2 ? "ready-to-mix" : ""}`}
+                onClick={() => { if (selectedEggs.length >= 2) onMix(); }}
+                src={eggSubmitButton}
+                alt="Mix the Mystery"
+              />
+            </div>
 
             {/* Mobile Button */}
-            <img
-              className="submit-button submit-mobile"
+            <div className={`submit-wrap ${selectedEggs.length === 2 ? "ready-to-mix" : ""}`}><img
+              className={`submit-button submit-mobile ${selectedEggs.length === 2 ? "ready-to-mix" : ""}`}
               onClick={() => { if (selectedEggs.length >= 2) onMix(); }}
               src={submitButton}
               alt="Mix the Mystery"
             />
+            </div>
           </>
         )}
         </div>

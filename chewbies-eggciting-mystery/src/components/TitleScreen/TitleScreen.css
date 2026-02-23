@@ -18,21 +18,12 @@
   justify-content: center;
 }
 
-.mystery-char {
-  max-width: 55%;
-  height: auto;
-  object-fit: contain;
-}
-
-.mystery-logo {
+.easter-logo {
   max-width: 32vw;
   margin-left: -100px;
   margin-bottom: 50px;
 }
 
-.mystery-logo-chewbie {
-  display: none;
-}
 
 .title-button {
   align-self: center;
@@ -68,17 +59,9 @@
     margin-bottom: 75px;
   }
 
-  .mystery-logo-chewbie {
-    display: block;
-    max-width: 100%;   /* don’t exceed 80% of viewport width */
-    margin-left: 0;
-    margin-bottom: 0;
+  .easter-logo {
+    justify-self: center;
   }
-
-  .mystery-logo {
-    display: none;
-  }
-
 
   .title-button {
     display: none;
@@ -89,9 +72,5 @@
     position: relative;
     width: 70%;
     top: 23rem;
-  }
-
-  .mystery-char {
-    display: none;
   }
 }

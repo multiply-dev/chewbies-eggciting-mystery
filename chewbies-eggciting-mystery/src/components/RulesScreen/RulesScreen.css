@@ -8,9 +8,8 @@
   justify-content: center;
   align-items: center;
 }
-
-
 .rules-button {
+  display: block;
   align-self: center;
   cursor: pointer;      
   transition: transform 0.2s ease;
@@ -23,15 +22,25 @@
   transform: scale(1.05);
 }
 
+.rules-button-mobile {
+  display: none;
+}
+
+
 @media (max-width: 968px) {
   .rules-screen {
     background-image: url("../../assets/base/rules_background_mobile.jpg");
   }
 
-  .rules-button{
-    width: 23rem;
+  .rules-button-mobile {
+    display: block;
+    width: 18rem;
     position: absolute;
-    bottom: 11rem;
+    bottom: 6rem;
+  }
+
+  .rules-button {
+    display: none;
   }
 
 }

@@ -102,7 +102,7 @@ const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
               onChange={(token) => setCaptchaToken(token)}
           />
 
-          <button className="submit-button" type="submit" disabled={isSubmitting}>
+          <button className="form-submit-button" type="submit" disabled={isSubmitting}>
             {isSubmitting ? 'Submitting...' : <img src={submitButton} alt="Submit" />}
           </button>
         </form>
