@@ -19,16 +19,16 @@
 
 .egg-grid {
   position: absolute;
-  bottom: 14%;
-  left: 22%;
+  bottom: 10%;
+  left: 25%;
   width: 35%;
   gap: 1rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 across (desktop) */
   grid-template-rows: repeat(3, auto);   /* 3 rows */
 
-  column-gap: 3.5rem;
-  row-gap: 3rem;
+  column-gap: 2.8rem;
+  row-gap: 5rem;
 
   justify-items: center;
   align-items: end;
