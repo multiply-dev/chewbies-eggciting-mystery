@@ -22,7 +22,12 @@
   transform: scale(1.05);
 }
 
-.rules-button-mobile {
+.rules-eggs {
+  display: block;
+  width: 60rem;
+}
+
+.rules-eggs-mobile {
   display: none;
 }
 
@@ -32,15 +37,40 @@
     background-image: url("../../assets/base/rules_background_mobile.jpg");
   }
 
-  .rules-button-mobile {
+  .rules-button {
     display: block;
     width: 18rem;
     position: absolute;
     bottom: 6rem;
   }
 
-  .rules-button {
+  .rules-eggs-mobile {
+        display: block;
+        width: 55%;
+        position: absolute;
+        bottom: 200px;
+  }
+
+  .rules-eggs {
     display: none;
   }
 
+}
+
+@media (max-width: 718px) {
+    .rules-eggs-mobile {
+        display: block;
+        width: 62%;
+        position: absolute;
+        bottom: 275px;
+    }
+}
+
+@media (max-width: 418px) {
+    .rules-eggs-mobile {
+        display: block;
+        width: 80%;
+        position: absolute;
+        bottom: 350px;
+    }
 }

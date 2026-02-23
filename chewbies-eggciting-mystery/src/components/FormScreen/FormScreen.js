@@ -3,8 +3,17 @@ import submitButton from "../../assets/buttons/submit-button.png";
 import enterText from "../../assets/base/Form_Text.png";
 import { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import grass from "../../assets/base/grass.png";
+import gameChewbie from "../../assets/base/game_chewbie.png";
 
 import jsonp from 'jsonp';
+
+const eggs = [
+    "BLUE RASPBERRY", "BLUEBERRY", "COTTON CANDY", "DRAGON FRUIT", "FRUIT PUNCH",
+    "GRAPE", "GREEN APPLE", "KeyLimePie", "LEMON", "LYCHEE", "MANGO", "ORANGE CREAMSICLE",
+    "PEACH", "STRAWBERRY", "WATERMELON"
+];
+
 
 const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
   const MailchimpURL = process.env.REACT_APP_MAILCHIMP;
@@ -45,6 +54,36 @@ const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
 
   return (
     <div className="form-screen">
+      <img src={gameChewbie} alt="Game Chewbie" className="form-chewbie" />
+      <div className="egg-grid-form">
+        {eggs.map((flavor) => {
+          // const isSelected = selectedEggs.some(p => p.flavor === flavor);
+          const eggSrc = require(`../../assets/eggs/eggs_${flavor}.png`);
+
+          return (
+            <div
+              key={flavor}
+              className={`egg-cell-form`}
+            >
+              <img
+                src={eggSrc}
+                alt={flavor}
+                className="egg-icon-form"
+              />
+
+              {/* Grass overlay */}
+              <img
+                src={grass}
+                alt=""
+                className="egg-grass-form"
+                aria-hidden="true"
+              />
+            </div>
+          );
+        })}
+      </div>
+
+
 
       <div className="form-content-container">
         <div className="header-text">

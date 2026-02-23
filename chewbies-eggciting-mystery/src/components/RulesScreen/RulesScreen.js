@@ -8,13 +8,13 @@ const RulesScreen = ({ onNext }) => {
     <div className="rules-screen">
       <img 
         onClick={onNext} 
-        className="rules-button"
+        className="rules-eggs"
         src={rulesEggs} 
         alt="Egg Rules" 
       />
       <img 
         onClick={onNext} 
-        className="rules-button-mobile"
+        className="rules-eggs-mobile"
         src={rulesEggsMobile} 
         alt="Egg Rules" 
       />

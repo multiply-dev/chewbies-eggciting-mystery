@@ -17,14 +17,16 @@
 .form-content-container {
   width: 50%;            /* take half of the screen width */
   position: absolute;    /* position relative to the screen */
-  top: 50%;              /* vertical center */
-  left: 50%;             /* start at the middle of the screen */
-  transform: translate(0, -50%); /* keep vertical centering */
   display: flex;         /* for inner content alignment */
   flex-direction: column;
   justify-content: center; /* push content to the right within this container */
   align-items: center;   /* vertical alignment of inner content */
   gap: 1rem;
+
+  width: 50vw;
+  height: 100vh;
+  background-image: url("../../assets/base/form_desktop.png");
+  background-size: cover;
 }
 
 .header-text {
@@ -36,8 +38,63 @@
   text-align: center;
 }
 
+.form-chewbie {
+  display: block;
+  width: 15rem;
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+}
 
-@media (max-width: 968px) {
+
+.egg-grid-form {
+  position: absolute;
+  bottom: 10%;
+  left: 24%;
+  width: 35%;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 across (desktop) */
+  grid-template-rows: repeat(3, auto);   /* 3 rows */
+
+  column-gap: 2.8rem !important;
+  row-gap: 5rem;
+
+  justify-items: center;
+  align-items: end;
+  z-index: 0;
+}
+
+.egg-cell-form {
+  position: relative;
+  width: 103px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.egg-icon-form {
+  width: 100%;
+  transition: transform 0.2s ease;
+  position: relative;
+  z-index: 2; /* below grass */
+}
+
+.egg-grass-form {
+  position: absolute;
+  bottom: -6px;          /* tweak to taste */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115%;           /* slightly wider than egg */
+  pointer-events: none;  /* clicks go through to egg */
+  z-index: 3;            /* above egg */
+}
+
+
+
+
+@media (max-width: 868px) {
   .form-chewbie-wrapper {
     display: none;
   }
@@ -67,7 +124,12 @@
     gap: 1rem;
   }
 
-
+  .form-chewbie {
+    display: none;
+  }
+  .egg-grid-form {
+    display: none;
+  }
 }
 
 .disclaimer-text {
@@ -146,6 +208,6 @@ input:-webkit-autofill:active {
   color: #16478e;
 }
 .form-submit-button img {
-  width: 8rem;
+  width: 12rem;
   cursor: pointer;
 }

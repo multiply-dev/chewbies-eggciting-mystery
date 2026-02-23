@@ -19,8 +19,8 @@
 }
 
 .easter-logo {
-  max-width: 32vw;
-  margin-left: -100px;
+  width: 58vw;
+  margin-right: 250px;
   margin-bottom: 50px;
 }
 
@@ -60,7 +60,8 @@
   }
 
   .easter-logo {
-    justify-self: center;
+    width: 80%;
+    margin: 0;
   }
 
   .title-button {
@@ -70,7 +71,7 @@
   .title-button-mobile {
     display: block;
     position: relative;
-    width: 70%;
-    top: 23rem;
+    width: 60%;
+    top: 9rem;
   }
 }
