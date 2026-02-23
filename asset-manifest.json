@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/chewbies-eggciting-mystery/static/css/main.18178593.css",
-    "main.js": "/chewbies-eggciting-mystery/static/js/main.3ebb88fb.js",
+    "main.css": "/chewbies-eggciting-mystery/static/css/main.f4621582.css",
+    "main.js": "/chewbies-eggciting-mystery/static/js/main.381e0e27.js",
     "static/js/453.794d44b4.chunk.js": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js",
+    "static/media/form_desktop.png": "/chewbies-eggciting-mystery/static/media/form_desktop.5316cf102ba0fd2d7f28.png",
     "static/media/backingtrack1.mp3": "/chewbies-eggciting-mystery/static/media/backingtrack1.00ce8148fc0c4717d071.mp3",
     "static/media/rules_eggs.png": "/chewbies-eggciting-mystery/static/media/rules_eggs.9ae78f983aef11b8a0a0.png",
     "static/media/title_logo.png": "/chewbies-eggciting-mystery/static/media/title_logo.cf8b1912119a93d1af16.png",
+    "static/media/end_chewbie.png": "/chewbies-eggciting-mystery/static/media/end_chewbie.c7863b278618cb90da26.png",
+    "static/media/end_chewbie_mobile.png": "/chewbies-eggciting-mystery/static/media/end_chewbie_mobile.e2ed33b4e25c0e88fe7c.png",
     "static/media/rules_eggs_mobile.png": "/chewbies-eggciting-mystery/static/media/rules_eggs_mobile.3a221ce922ace3b43d2f.png",
     "static/media/game_chewbie.png": "/chewbies-eggciting-mystery/static/media/game_chewbie.923f8c1b9a97fb4585a4.png",
     "static/media/rules_background_desktop.jpg": "/chewbies-eggciting-mystery/static/media/rules_background_desktop.bfeeb1e711ad8763e197.jpg",
@@ -14,6 +17,7 @@
     "static/media/end_background_desktop.jpg": "/chewbies-eggciting-mystery/static/media/end_background_desktop.ecb8ae24bd75c5676d7c.jpg",
     "static/media/game_background_desktop.jpg": "/chewbies-eggciting-mystery/static/media/game_background_desktop.33b7abd542071f2c3678.jpg",
     "static/media/egg-submit-button.png": "/chewbies-eggciting-mystery/static/media/egg-submit-button.e5124a0e5137e7ced2f7.png",
+    "static/media/end_text.png": "/chewbies-eggciting-mystery/static/media/end_text.ef5b68e7ba5a9a5a2d14.png",
     "static/media/eggs_WATERMELON.png": "/chewbies-eggciting-mystery/static/media/eggs_WATERMELON.1443d7b672b4a3ea0cef.png",
     "static/media/eggs_GREEN APPLE.png": "/chewbies-eggciting-mystery/static/media/eggs_GREEN APPLE.537a9edc374ae3424093.png",
     "static/media/title_background_mobile.jpg": "/chewbies-eggciting-mystery/static/media/title_background_mobile.2c6d7530c6b4522099ea.jpg",
@@ -40,15 +44,16 @@
     "static/media/eggSelection2.mp3": "/chewbies-eggciting-mystery/static/media/eggSelection2.d4ea7f1e383d5a9703d1.mp3",
     "static/media/begin-button.png": "/chewbies-eggciting-mystery/static/media/begin-button.f2c9b4be9a0809437a10.png",
     "static/media/hop-in-mobile-button.png": "/chewbies-eggciting-mystery/static/media/hop-in-mobile-button.850fcd50853e33474182.png",
+    "static/media/learn-button.png": "/chewbies-eggciting-mystery/static/media/learn-button.698d3810f0d6b960321b.png",
     "static/media/submit-button.png": "/chewbies-eggciting-mystery/static/media/submit-button.92af65363ac4c01e870a.png",
     "static/media/grass.png": "/chewbies-eggciting-mystery/static/media/grass.cf9d4dea8b7656e0fddc.png",
     "index.html": "/chewbies-eggciting-mystery/index.html",
-    "main.18178593.css.map": "/chewbies-eggciting-mystery/static/css/main.18178593.css.map",
-    "main.3ebb88fb.js.map": "/chewbies-eggciting-mystery/static/js/main.3ebb88fb.js.map",
+    "main.f4621582.css.map": "/chewbies-eggciting-mystery/static/css/main.f4621582.css.map",
+    "main.381e0e27.js.map": "/chewbies-eggciting-mystery/static/js/main.381e0e27.js.map",
     "453.794d44b4.chunk.js.map": "/chewbies-eggciting-mystery/static/js/453.794d44b4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18178593.css",
-    "static/js/main.3ebb88fb.js"
+    "static/css/main.f4621582.css",
+    "static/js/main.381e0e27.js"
   ]
 }
