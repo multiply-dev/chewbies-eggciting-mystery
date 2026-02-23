@@ -19,13 +19,16 @@
 
 .egg-grid {
   position: absolute;
-  bottom: 8%;
-  right: 35%;
+  bottom: 14%;
+  left: 22%;
   width: 35%;
   gap: 1rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 across (desktop) */
   grid-template-rows: repeat(3, auto);   /* 3 rows */
+
+  column-gap: 3.5rem;
+  row-gap: 3rem;
 
   justify-items: center;
   align-items: end;
@@ -34,7 +37,7 @@
 
 .egg-cell {
   position: relative;
-  width: 120px;
+  width: 108px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -53,16 +56,22 @@
 }
 
 .egg-cell.selected .egg-icon {
-  transform: rotate(-20deg) translateY(-20px);
+  transform: rotate(20deg) translateY(-40px);
   animation: jiggle 0.4s ease;
 }
 
+.egg-grid .egg-cell:nth-child(11) { transform: translateX(45px)  }
+.egg-grid .egg-cell:nth-child(12) { transform: translateX(40px)  }
+.egg-grid .egg-cell:nth-child(13) { transform: translateX(40px)   }
+.egg-grid .egg-cell:nth-child(14) { transform: translateX(35px)  }
+.egg-grid .egg-cell:nth-child(15) { transform: translateX(30px) }
+
 @keyframes jiggle {
-  0% { transform: rotate(-20deg) translateX(0); }
-  25% { transform: rotate(-15deg) translateX(-2px); }
-  50% { transform: rotate(-20deg) translateX(2px); }
-  75% { transform: rotate(-25deg) translateX(-2px); }
-  100% { transform: rotate(-20deg) translateX(0); }
+  0% { transform: rotate(20deg) translateX(0); }
+  25% { transform: rotate(15deg) translateX(-2px); }
+  50% { transform: rotate(20deg) translateX(2px); }
+  75% { transform: rotate(25deg) translateX(-2px); }
+  100% { transform: rotate(20deg) translateX(0); }
 }
 
 .egg-grass {
@@ -150,6 +159,15 @@
 
   .submit-mobile {
     display: block;
+  }
+
+    .egg-grid .egg-cell:nth-child(n+11) {
+    transform: none;
+    margin: 0;
+  }
+
+  .egg-grid .egg-cell:nth-child(n+11) .egg-icon {
+    transform: none;
   }
   
 }
