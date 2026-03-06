@@ -7,6 +7,7 @@ const TitleScreen = ({ onNext }) => {
   return (
     <div className="title-container">
       <div className="content-container">
+
         <img
           className="easter-logo"
           src={easterLogo}

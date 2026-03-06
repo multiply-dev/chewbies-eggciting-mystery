@@ -37,8 +37,8 @@ const GameScreen = ({ selectedEggs, onSelectEgg, onMix }) => {
             </div>
 
             {/* Mobile Button */}
-            <div className={`submit-wrap ${selectedEggs.length === 2 ? "ready-to-mix" : ""}`}><img
-              className={`submit-button submit-mobile ${selectedEggs.length === 2 ? "ready-to-mix" : ""}`}
+            <div className={`submit-wrap`}><img
+              className={`submit-button submit-mobile`}
               onClick={() => { if (selectedEggs.length >= 2) onMix(); }}
               src={submitButton}
               alt="Mix the Mystery"
@@ -49,9 +49,17 @@ const GameScreen = ({ selectedEggs, onSelectEgg, onMix }) => {
         </div>
       )}
 
-     <div className="egg-grid">
+      <div className="egg-grid">
         {eggs.map((flavor) => {
-          const isSelected = selectedEggs.some(p => p.flavor === flavor);
+          // Find this egg's position in the selected array
+          const selectedIndex = selectedEggs.findIndex(p => p.flavor === flavor);
+          const isSelected = selectedIndex !== -1;
+
+          // Assign order-based class
+          let selectionClass = "";
+          if (selectedIndex === 0) selectionClass = "selected-first";
+          if (selectedIndex === 1) selectionClass = "selected-second";
+
           const eggSrc = require(`../../assets/eggs/eggs_${flavor}.png`);
 
           return (
@@ -63,7 +71,7 @@ const GameScreen = ({ selectedEggs, onSelectEgg, onMix }) => {
               <img
                 src={eggSrc}
                 alt={flavor}
-                className="egg-icon"
+                className={`egg-icon ${selectionClass}`}
               />
 
               {/* Grass overlay */}

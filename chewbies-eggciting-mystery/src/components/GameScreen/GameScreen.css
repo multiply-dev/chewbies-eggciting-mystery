@@ -62,9 +62,16 @@
   transform: scale(1.05);
 }
 
-.egg-cell.selected .egg-icon {
+  /* First selected egg → moves up */
+.egg-icon.selected-first {
   transform: rotate(20deg) translateY(-40px);
   animation: jiggle 0.4s ease;
+}
+
+/* Second selected egg → moves down */
+.egg-icon.selected-second {
+  transform: rotate(-20deg) translateY(-40px);
+  animation: jiggleleft 0.4s ease;
 }
 
 .egg-grid .egg-cell:nth-child(11) { transform: translateX(45px)  }
@@ -75,10 +82,18 @@
 
 @keyframes jiggle {
   0% { transform: rotate(20deg) translateX(0); }
-  25% { transform: rotate(15deg) translateX(-2px); }
-  50% { transform: rotate(20deg) translateX(2px); }
-  75% { transform: rotate(25deg) translateX(-2px); }
+  25% { transform: rotate(15deg) translateX(-5px); }
+  50% { transform: rotate(20deg) translateX(5px); }
+  75% { transform: rotate(25deg) translateX(-5px); }
   100% { transform: rotate(20deg) translateX(0); }
+}
+
+@keyframes jiggleleft {
+  0% { transform: rotate(-20deg) translateX(0); }
+  25% { transform: rotate(-15deg) translateX(5px); }
+  50% { transform: rotate(-20deg) translateX(-5px); }
+  75% { transform: rotate(-25deg) translateX(5px); }
+  100% { transform: rotate(-20deg) translateX(0); }
 }
 
 .egg-grass {
@@ -171,10 +186,22 @@
     grid-template-rows: repeat(5, auto);   /* 5 rows */
     gap: 10px;
   }
-  .egg-cell.selected .egg-icon {
+  /* .egg-cell.selected .egg-icon {
     transform: rotate(20deg) translateY(-20px);
     animation: jiggle 0.4s ease;
-  }
+  } */
+
+  /* First selected egg → moves up */
+.egg-icon.selected-first {
+  transform: rotate(20deg) translateY(-20px);
+  animation: jiggle 0.4s ease;
+}
+
+/* Second selected egg → moves down */
+.egg-icon.selected-second {
+  transform: rotate(-20deg) translateY(-20px);
+  animation: jiggleleft 0.4s ease;
+}
 
   .egg-cell {
     width: 70px;
@@ -195,11 +222,11 @@
   
   .submit-button {
     width: 14rem;
-    justify-self: anchor-center;
     cursor: pointer;
     top: 750px;
     position: relative;
-    left: 4px;
+    margin: 0 auto;
+    left: 0;
   }
 
   .submit-wrap {

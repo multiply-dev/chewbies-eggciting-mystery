@@ -19,7 +19,7 @@
 }
 
 .easter-logo {
-  width: 58vw;
+  width: 68vw;
   margin-right: 250px;
   margin-bottom: 50px;
 }
@@ -73,5 +73,12 @@
     position: relative;
     width: 60%;
     top: 9rem;
+  }
+}
+
+@media (max-width: 458px) {
+  .easter-logo {
+    width: 95%;
+    margin: 0;
   }
 }

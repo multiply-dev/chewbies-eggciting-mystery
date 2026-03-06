@@ -36,11 +36,10 @@
 }
 .end-text {
   display: block;
-  width: 15rem;
   position: absolute;
   bottom: 300px;
-  width: 15rem;
-  left: 160px;
+  left: 134px;
+  width: 18rem;
 }
 
 .learn-button {
@@ -51,7 +50,7 @@
 
 }
 
-@media (max-width: 968px) {
+@media (max-width: 800px) {
   .end-screen {
     background-image: url("../../assets/base/end_background_mobile.jpg");
     background-position: center;

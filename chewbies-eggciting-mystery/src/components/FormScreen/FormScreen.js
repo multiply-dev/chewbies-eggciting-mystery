@@ -83,8 +83,6 @@ const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
         })}
       </div>
 
-
-
       <div className="form-content-container">
         <div className="header-text">
         <img src={enterText} alt="Enter for a chance to win!" className="last-step" />
@@ -146,7 +144,7 @@ const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
           </button>
         </form>
 
-        <p className="disclaimer-text"><em>*NO PURCHASE NECESSARY. Void where prohibited. Open to legal residents of the 50 U.S. & D.C., [18+] years or older. Sweepstakes begins (09/08/2025) and ends (10/30/2025). Subject to Official Rules at HI-CHEW.com/pages/hopintogiving.</em></p>
+        <p className="disclaimer-text"><em>*NO PURCHASE NECESSARY. Void where prohibited. Open to legal residents of the 50 U.S. & D.C., [18+] years or older. Sweepstakes begins (02/24/2026) and ends (04/04/2026). Subject to Official Rules at HI-CHEW.com/pages/hopintogiving.</em></p>
       </div>
     </div>
   );

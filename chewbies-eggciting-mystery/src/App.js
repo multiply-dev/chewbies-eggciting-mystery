@@ -21,8 +21,27 @@ function App() {
     audio.volume = 0.4; // base volume
     bgAudioRef.current = audio;
 
-    // Do not autoplay yet — browsers block it.
-    return () => audio.pause();
+    // Try to autoplay
+    const tryPlay = audio.play();
+
+    if (tryPlay !== undefined) {
+      tryPlay.catch(() => {
+        // Autoplay blocked — wait for first interaction
+        const resume = () => {
+          audio.play();
+          window.removeEventListener("click", resume);
+          window.removeEventListener("touchstart", resume);
+        };
+
+        window.addEventListener("click", resume);
+        window.addEventListener("touchstart", resume);
+      });
+    }
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
   }, []);
 
   const startBackgroundMusic = () => {
