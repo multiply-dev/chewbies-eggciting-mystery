@@ -35,7 +35,8 @@ module.exports = async function handler(req, res) {
   }
 
   const { fname, lname, email, flavor, mysGuess, captchaToken } = req.body;
-
+  console.log("captchaToken received:", captchaToken);
+  
   // --- Basic input validation ---
   if (!email || !captchaToken) {
     return res.status(400).json({ error: "Email and reCAPTCHA token are required." });
