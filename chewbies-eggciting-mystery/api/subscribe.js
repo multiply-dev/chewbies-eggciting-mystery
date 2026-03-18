@@ -78,7 +78,7 @@ module.exports = async function handler(req, res) {
   // --- 2. Subscribe to MailChimp ---
   const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME } = process.env;
   const mailchimpUrl = `https://${MAILCHIMP_DC}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`;
-  console.log("Attempt:", fname, lname, email, mysGuess, MAILCHIMP_LIST_ID);
+  console.log("Attempt:", fname, lname, email, mysGuess);
 
   try {
     const mailchimpRes = await fetch(mailchimpUrl, {
