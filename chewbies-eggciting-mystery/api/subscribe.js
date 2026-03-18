@@ -22,7 +22,7 @@ function setCORSHeaders(req, res) {
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 }
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   setCORSHeaders(req, res);
 
   // Handle preflight request
