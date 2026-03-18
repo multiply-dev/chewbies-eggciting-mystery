@@ -28,7 +28,9 @@ module.exports = async function handler(req, res) {
   const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME, API_TOKEN } = process.env;
   
   const token = req.headers["x-api-token"];
-  console.log("token", token, "API_token", API_TOKEN, MAILCHIMP_DC)
+  const content_type = req.headers["Content-Type"];
+  console.log("content_type", content_type, token)
+  console.log("request", req.headers)
   if (!token || token !== API_TOKEN) {
     return res.status(401).json({ error: "Unauthorized" });
   }
