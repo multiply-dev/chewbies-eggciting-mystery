@@ -73,7 +73,7 @@ module.exports = async function handler(req, res) {
   const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME } = process.env;
   const mailchimpUrl = `https://${MAILCHIMP_DC}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`;
   console.log("Attempt:", fname, lname, email, mysGuess, MAILCHIMP_LIST_ID);
-  
+
   try {
     const mailchimpRes = await fetch(mailchimpUrl, {
       method: "POST",
@@ -83,7 +83,7 @@ module.exports = async function handler(req, res) {
       },
       body: JSON.stringify({
         email_address: email,
-        status: "pending", // "pending" = double opt-in. Change to "subscribed" to skip.
+        status: "subscribed", 
         merge_fields: {
           FNAME: fname || "",
           LNAME: lname || "",
