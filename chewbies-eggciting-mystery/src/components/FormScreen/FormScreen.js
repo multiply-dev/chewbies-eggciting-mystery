@@ -38,6 +38,7 @@ const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
     const mysGuess = selectedEggs[0].flavor + ", " + selectedEggs[1].flavor;
 
     try {
+      console.log("captchaToken sending:", captchaToken);
       const res = await fetch(PROXY_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
