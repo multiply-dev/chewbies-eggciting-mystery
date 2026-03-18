@@ -25,6 +25,15 @@ function setCORSHeaders(req, res) {
 module.exports = async function handler(req, res) {
   setCORSHeaders(req, res);
 
+  // Handle preflight request
+  if (req.method === "OPTIONS") {
+    return res.status(204).end();
+  }
+
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
   const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME, API_TOKEN } = process.env;
   
   const token = req.headers["x-api-token"];
@@ -35,14 +44,6 @@ module.exports = async function handler(req, res) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
-  // Handle preflight request
-  if (req.method === "OPTIONS") {
-    return res.status(204).end();
-  }
-
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
 
   const { fname, lname, email, flavor, mysGuess, captchaToken } = req.body;
   
