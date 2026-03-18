@@ -35,7 +35,7 @@ module.exports = async function handler(req, res) {
   }
 
   const { fname, lname, email, flavor, mysGuess, captchaToken } = req.body;
-  console.log("Attempt:", fname, lname, email);
+  console.log("Attempt:", fname, lname, email, mysGuess, MAILCHIMP_LIST_ID);
   
   // --- Basic input validation ---
   if (!email || !captchaToken) {
