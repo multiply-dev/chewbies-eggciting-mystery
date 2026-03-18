@@ -15,7 +15,7 @@ const eggs = [
 const PROXY_URL = "https://chewbies-eggciting-mystery.vercel.app/api/subscribe";
 
 const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
-  const captchaKey = process.env.REACT_APP_CAPTCHA_KEY;
+  const captchaKey = process.env.REACT_APP_CAPTCHA_PUBLIC_KEY;
   const [fname, setFName] = useState('');
   const [lname, setLName] = useState('');
   const [email, setEmail] = useState('');
