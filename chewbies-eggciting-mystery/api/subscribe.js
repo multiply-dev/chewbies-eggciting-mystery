@@ -19,7 +19,6 @@ function setCORSHeaders(req, res) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   }
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, x-api-token");
 }
 
@@ -27,6 +26,7 @@ module.exports = async function handler(req, res) {
   setCORSHeaders(req, res);
 
   const token = req.headers["x-api-token"];
+  console.log("token", token, "API_token", process.env.API_TOKEN)
   if (!token || token !== process.env.API_TOKEN) {
     return res.status(401).json({ error: "Unauthorized" });
   }
