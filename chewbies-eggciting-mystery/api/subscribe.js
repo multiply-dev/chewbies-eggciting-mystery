@@ -25,9 +25,11 @@ function setCORSHeaders(req, res) {
 module.exports = async function handler(req, res) {
   setCORSHeaders(req, res);
 
+  const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME, API_TOKEN } = process.env;
+  
   const token = req.headers["x-api-token"];
-  console.log("token", token, "API_token", process.env.API_TOKEN)
-  if (!token || token !== process.env.API_TOKEN) {
+  console.log("token", token, "API_token", API_TOKEN, MAILCHIMP_DC)
+  if (!token || token !== API_TOKEN) {
     return res.status(401).json({ error: "Unauthorized" });
   }
 
@@ -76,7 +78,6 @@ module.exports = async function handler(req, res) {
   }
 
   // --- 2. Subscribe to MailChimp ---
-  const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME } = process.env;
   const mailchimpUrl = `https://${MAILCHIMP_DC}.api.mailchimp.com/3.0/lists/${MAILCHIMP_LIST_ID}/members`;
   console.log("Attempt:", fname, lname, email, mysGuess);
 

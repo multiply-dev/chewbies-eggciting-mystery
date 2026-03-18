@@ -36,7 +36,6 @@ const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
     }
 
     const mysGuess = selectedEggs[0].flavor + ", " + selectedEggs[1].flavor;
-    console.log("process.env.REACT_APP_API_TOKEN", process.env.REACT_APP_API_TOKEN)
     try {
       const res = await fetch(PROXY_URL, {
         method: "POST",
