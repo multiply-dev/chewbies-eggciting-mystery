@@ -12,8 +12,7 @@ const eggs = [
   "PEACH", "STRAWBERRY", "WATERMELON"
 ];
 
-// ✏️ Replace with your deployed Vercel function URL
-const PROXY_URL = "https://chewbies-eggciting-mystery.vercel.app/api/subscribe"; 
+const PROXY_URL = "https://chewbies-eggciting-mystery.vercel.app/api/subscribe";
 
 const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
   const captchaKey = process.env.REACT_APP_CAPTCHA_KEY;
