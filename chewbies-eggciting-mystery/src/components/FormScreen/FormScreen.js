@@ -41,7 +41,6 @@ const FormScreen = ({ onSubmit, selectedEggs, onBack }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "x-api-token": process.env.REACT_APP_API_TOKEN,
         },
         body: JSON.stringify({ fname, lname, email, flavor, mysGuess, captchaToken }),
       });

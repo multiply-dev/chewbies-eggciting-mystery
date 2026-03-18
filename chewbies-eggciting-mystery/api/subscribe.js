@@ -19,7 +19,7 @@ function setCORSHeaders(req, res) {
     res.setHeader("Access-Control-Allow-Origin", origin);
   }
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, x-api-token");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 }
 
 module.exports = async function handler(req, res) {
@@ -34,17 +34,7 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME, API_TOKEN } = process.env;
-  
-  const token = req.headers["x-api-token"];
-  const content_type = req.headers["Content-Type"];
-  console.log("content_type", content_type, token)
-  console.log("request", req.headers)
-  if (!token || token !== API_TOKEN) {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
-
-
+  const { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID, MAILCHIMP_DC, MAILCHIMP_FORM_NAME } = process.env;
   const { fname, lname, email, flavor, mysGuess, captchaToken } = req.body;
   
   // --- Basic input validation ---
