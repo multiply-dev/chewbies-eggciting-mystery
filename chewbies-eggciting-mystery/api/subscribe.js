@@ -20,10 +20,16 @@ function setCORSHeaders(req, res) {
   }
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, x-api-token");
 }
 
 module.exports = async function handler(req, res) {
   setCORSHeaders(req, res);
+
+  const token = req.headers["x-api-token"];
+  if (!token || token !== process.env.API_TOKEN) {
+    return res.status(401).json({ error: "Unauthorized" });
+  }
 
   // Handle preflight request
   if (req.method === "OPTIONS") {
