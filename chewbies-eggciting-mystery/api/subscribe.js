@@ -58,6 +58,7 @@ module.exports = async function handler(req, res) {
     });
 
     const recaptchaData = await recaptchaRes.json();
+    console.log("reCAPTCHA response:", JSON.stringify(recaptchaData)); // add this line
 
     if (!recaptchaData.success) {
       console.warn("reCAPTCHA failed:", recaptchaData["error-codes"]);
