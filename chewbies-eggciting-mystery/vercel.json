@@ -1,4 +1,10 @@
 {
+  "builds": [
+    {
+      "src": "api/subscribe.js",
+      "use": "@vercel/node"
+    }
+  ],
   "functions": {
     "api/subscribe.js": {
       "memory": 128,
